@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    container_name: no-phone
+    restart: unless-stopped
+    ports:
+      - "${NO_PHONE_PORT:-8097}:80"
