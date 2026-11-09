@@ -1,6 +1,6 @@
 # No Phone
 
-A Dutch-language, self-hosted activity list for spending time together away from screens. Built with React + Vite and served by Nginx in Docker. Designed to run on Umbrel, including Raspberry Pi 5 (ARM64).
+A Dutch-language, self-hosted activity list for spending time together away from screens. Built with React + Vite and served by Nginx in Docker. Designed for Umbrel, including Raspberry Pi 5 (ARM64).
 
 ## Features
 
@@ -19,7 +19,13 @@ A Dutch-language, self-hosted activity list for spending time together away from
    `https://github.com/stormvideo95-dotcom/no_phone`
 3. Find **No Phone** in the **Stormvideo App Store** and install it.
 
-The Umbrel package builds the app from this repository on your Umbrel device. The app is served internally on port 80 through Umbrel's app proxy.
+The first image build is published automatically by GitHub Actions for both `linux/amd64` and `linux/arm64`. Before installing from the community store, the GitHub Container Registry package must be set to **Public** so Umbrel can pull it without credentials.
+
+## Build image locally
+
+```sh
+docker build -t no-phone:local .
+```
 
 ## Run directly with Docker Compose
 
@@ -50,8 +56,8 @@ npm run dev
 
 ## Data and privacy
 
-Activities are stored in localStorage in the browser used to access the app. This version does not use a server database, accounts, analytics or external API. Browser data is device/browser-specific; use the same browser to see the same list. Clearing browser site data will clear the list, so export/backup is not yet included.
+Activities and the selected theme are stored in localStorage in the browser used to access the app. This version does not use a server database, accounts, analytics or external API. Browser data is device/browser-specific; use the same browser to see the same list. Clearing browser site data will clear the list. Browser localStorage is not included in Umbrel's server-side app-data backups.
 
 ## Raspberry Pi 5
 
-The Dockerfile uses Node.js and Nginx Alpine base images, which support ARM64. Umbrel builds the image on the device from the repository source.
+The GitHub Actions workflow builds and publishes a multi-platform image for `linux/arm64` (Raspberry Pi 5) and `linux/amd64`.
