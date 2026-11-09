@@ -1,27 +1,31 @@
 manifestVersion: 1
 id: stormvideo-no-phone
-name: No Phone
-tagline: Simple ideas for quality time away from screens
-icon: https://raw.githubusercontent.com/stormvideo95-dotcom/no_phone/main/stormvideo-no-phone/icon.svg
+storage:
+  dataRoot: data
 category: Lifestyle
+name: No Phone
 version: "1.0.0"
-port: 80
+tagline: Simple ideas for quality time away from screens
 description: >-
   No Phone is a Dutch-language activity list for spending time together away
   from screens. Browse 24 starter ideas, search and filter activities, add
   your own ideas, edit or remove them, and mark moments as completed.
 
-  Your activity list and theme preference are stored locally in the browser.
-  No account, analytics, external database, or external API is required.
+  Your activity list and theme preference are stored in the browser's local
+  storage. The app does not need an account, server database, analytics, or
+  external API. Browser data is specific to each browser and is not included
+  in Umbrel app-data backups.
+releaseNotes: ""
 developer: Stormvideo
 website: https://github.com/stormvideo95-dotcom/no_phone
-submitter: Stormvideo
-submission: https://github.com/stormvideo95-dotcom/no_phone
+dependencies: []
 repo: https://github.com/stormvideo95-dotcom/no_phone
 support: https://github.com/stormvideo95-dotcom/no_phone/issues
-releaseNotes: >-
-  Initial Umbrel Community App Store release.
-dependencies: []
+port: 3456
+gallery: []
 path: ""
 defaultUsername: ""
 defaultPassword: ""
+submitter: Stormvideo
+submission: https://github.com/stormvideo95-dotcom/no_phone
+icon: https://raw.githubusercontent.com/stormvideo95-dotcom/no_phone/main/stormvideo-no-phone/icon.svg
