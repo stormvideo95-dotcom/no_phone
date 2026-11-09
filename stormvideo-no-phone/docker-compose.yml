@@ -5,6 +5,6 @@ services:
       APP_PORT: 80
 
   server:
-    image: ghcr.io/stormvideo95-dotcom/no-phone:1.0.0@sha256:c2828c90dd974e008ebacd3c2d624924ba714af445fcc3fca89562af95629706
+    image: ghcr.io/stormvideo95-dotcom/no-phone:1.0.0@sha256:d6785b118a73db0e7f36087764a350e102b51ae6c48160c1a47e65e3fd6d4313@sha256:c2828c90dd974e008ebacd3c2d624924ba714af445fcc3fca89562af95629706
     init: true
     restart: on-failure
