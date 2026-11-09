@@ -9,6 +9,9 @@ on:
       - "package.json"
       - "index.html"
       - "src/**"
+      - "stormvideo-no-phone/icon.svg"
+      - "stormvideo-no-phone/umbrel-app.yml"
+      - "stormvideo-no-phone/docker-compose.yml"
       - ".github/workflows/publish-image.yml"
   workflow_dispatch:
 
